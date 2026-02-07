@@ -1,0 +1,412 @@
+*{
+    box-sizing: border-box;
+}
+html{
+    scroll-behavior: smooth;
+}
+body{
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-style: normal;
+}
+.nav-bar{
+    display: flex;
+    align-items: center;
+    height: 40%;
+    padding: 0px 100px;
+    margin-top: 30px;
+}
+.menu-bar{
+    width: 60%;
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+}
+.name{
+    width: 40%;
+    font-size: 30px;
+    color: brown;
+}
+.menu-bar li{
+    font-size: 20px;
+}
+a{
+    text-decoration: none;
+    color: black;
+    transition: all 0.4s ease;
+}
+a:hover{
+    color: rgb(188, 99, 99);
+    text-decoration: underline;
+    text-underline-offset: 10px ;
+}
+.left-part img{
+     border-radius: 50%;
+     box-shadow: 0 0 10px black;
+}
+.left-part{
+    margin-left: 80px;
+}
+#Home{
+    display: flex;
+    height: 90vh;
+    align-items: center;
+    gap: 70px;
+}
+.right-part{
+    display: flex;
+    flex-direction: column;
+}
+h1{
+    color: brown;
+}
+.head{
+    color: black;
+    font-size: 29px;
+}
+p{
+    font-size: 19px;
+    width: 90%;
+}
+.buttons > :nth-child(1){
+    padding: 10px 20px;
+    background-color: transparent;
+    border-radius: 20px;
+    font-size: 17px;
+    font-weight: 600;
+    border: 2px solid black;
+    transition: all 0.3s ease;
+}
+.buttons > :nth-child(1):hover{
+    background-color: black;
+    color: white;
+    cursor: pointer;
+}
+.buttons > :nth-child(2){
+    padding: 10px 20px;
+    background-color: transparent;
+    border-radius: 20px;
+    font-size: 15px;
+    font-weight: 600;
+    border: 2px solid black;
+    transition: all 0.3s ease;
+}
+.buttons > :nth-child(2):hover{
+    background-color: black;
+    color: white;
+    cursor: pointer;
+}
+.nav-bar-menu{
+    display: none;
+}
+
+@media (max-width: 1024px){
+     .nav-bar{
+        display: none;
+     }
+     .nav-bar-menu{
+        display: flex;
+     }
+     .icon i{
+        font-size: 35px;
+     }
+     .icon{
+        background-color: white;
+        margin-top: 50px;
+        margin-left: 70px;
+     }
+     .nav-bar-menu .menu-bar{
+        display: flex;
+        flex-direction: column;
+        background-color: burlywood;
+        position: fixed;
+        right: 0;
+        top: 70px;
+        padding: 15px;
+        gap: 10px;
+        border-radius: 10px;
+        margin-right: -700px;
+        transition: all 0.35s ease;
+     }
+     .nav-bar-menu .menu-bar.show{
+        margin-right: 0px;
+     }
+     .nav-bar-menu .menu-bar li{
+        padding: 8px;
+        font-weight: 600;
+     }
+     .nav-bar-menu .name{
+        margin-top: 20px;
+        margin-left: 100px;
+        padding-left: 30px;
+     }
+     .right-part p{
+        width: 440px;
+        text-align: center;
+     }
+     .left-part{
+        margin-left: 0px;
+        margin-top: 40px;
+     }
+     #Home{
+        display: flex;
+        flex-direction: column;
+        height: 118%;
+     }
+     .right-part{
+        align-items: center;
+     }
+} 
+@media(max-width: 767px){
+    .left-part img{
+        width: 270px;
+        margin-left: 40px;
+    }
+    .right-part p{
+        width: 300px;
+    }
+    .buttons{
+        margin-bottom: 20px;
+    }
+}
+/*styles for About Section*/
+.first-part{
+    text-align: center;
+}
+.second-part{
+    text-align: center;
+    border: 2px solid black ;
+    border-radius: 15px;
+    width: 700px;
+    margin-left: 300px;
+}
+.second-part .icon2{
+    font-size: 30px;
+    margin-top: 20px;
+}
+.second-part2 .bio{
+    margin-left: 80px;
+}
+.second-part2 .bio2{
+    margin-left: 80px;
+}
+
+/*Responsive for about section*/
+@media (max-width: 1024px){
+    .first-part{
+        text-align: center;
+        margin-top: 20px;
+    }
+    .second-part{
+        width: 420px;
+       margin-left: 300px;
+    }
+}
+@media (max-width: 767px){
+    .second-part{
+        width: 200px;
+        margin-left: 100px;
+        padding: 20px;
+    }
+    .first-part{
+        margin-top: 20px;
+    }
+    .second-part2 .bio{
+        width: 320px;
+    }
+    .second-part2 .bio2{
+        width: 320px;
+    }
+}
+
+/*Styles for skills section*/
+.skills {
+  max-width: 600px;
+  margin: auto;
+  padding: 20px;
+}
+h2{
+    text-align: center;
+    font-size: 35px;
+    color: brown;
+}
+.skills h2 {
+  margin-bottom: 25px;
+}
+
+.skill {
+  margin-bottom: 18px;
+  margin-left: 300px;
+}
+
+.skill span {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 6px;
+}
+
+.bar {
+  width: 600px;
+  height: 10px;
+  background: #e0e0e0;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.progress {
+  height: 100%;
+  border-radius: 5px;
+}
+.html   { width: 90%; background: #e34c26; }
+.css    { width: 85%; background: #264de4; }
+.js     { width: 70%; background: #f0db4f; }
+.react  { width: 65%; background: #61dafb; }
+.python { width: 75%; background: #306998; }
+.sql    { width: 50%; background: #00758f; }
+    
+/*Responsive for skills section*/
+@media(max-width: 1024px){
+    .skill{
+        margin-left: 50px;
+    }
+}
+@media(max-width: 767px){
+    .skill{
+        width: 100px;
+        margin-right: 50px;
+    }
+}
+
+/*styles for projects section*/
+.project-head{
+    text-align: center;
+    margin-top: 30px;
+}
+.row-wise{
+    display: flex;
+    flex-direction: row;
+}
+.project1{
+    width: 300px;
+    border: 2px solid black;
+    border-radius: 15px;
+    padding: 15px;
+    margin-left: 50px;
+}
+.project1:hover{
+    background-color: #e0e0e0;
+}
+.project1 a{
+    background-color: black;
+    color: white;
+    border-radius: 15px;
+    font-size: 16px;
+    padding: 10px;
+}
+.project1 p{
+    font-size: 18px;
+}
+.project1 a:hover{
+    background-color: white;
+    color: black;
+    cursor: pointer;
+}
+.project2{
+    width: 300px;
+    border: 2px solid black;
+    border-radius: 15px;
+    padding: 15px;
+    margin-left: 50px;
+}
+.project2:hover{
+    background-color: #e0e0e0;
+}
+.project2 a:hover{
+    background-color: white;
+    color: black;
+    cursor: pointer;
+}
+.project2 a{
+    background-color: black;
+    color: white;
+    border-radius: 15px;
+    font-size: 16px;
+    padding: 10px;
+}
+.project2 p{
+    font-size: 18px;
+}
+.project3{
+    width: 300px;
+    border: 2px solid black;
+    border-radius: 15px;
+    padding: 15px;
+    margin-left: 50px;
+}
+.project3:hover{
+    background-color: #e0e0e0;
+}
+.project3 a:hover{
+    background-color: white;
+    color: black;
+    cursor: pointer;
+}
+.project3 a{
+    background-color: black;
+    color: white;
+    border-radius: 15px;
+    font-size: 16px;
+    padding: 10px;
+    margin-bottom: 50px;
+}
+.project3 p{
+    font-size: 18px;
+}
+
+/*Responsive for projects section*/
+@media(max-width: 1024px){
+    .row-wise{
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+    .project1{
+        width: 450px;
+    }
+    .project2{
+        width: 450px;
+    }
+    .project3{
+        width: 450px;
+    }
+}
+@media(max-width: 767px){
+    .row-wise{
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+}
+
+/*Styles for contact section*/
+.headline{
+    text-align: center;
+}
+.headline p{
+    font-size: 25px;
+}
+.mail{
+    margin-left: 40px;
+    margin-right: 900px;
+}
+.email-icon{
+    font-size: 26px;
+}
+.linkdin{
+    font-size: 26px;
+    margin-left: 40px;
+}
+.github{
+    font-size: 26px;
+    margin-top: 20px;
+    margin-left: 40px;
+}
